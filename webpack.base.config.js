@@ -14,6 +14,7 @@ module.exports = (env) => {
       content: "./src/js/content.js",
       popup: "./src/js/popup.js",
       options: "./src/js/options.js",
+      script_inject_jira_link: "./src/scripts/inject_jira_link.js",
     },
     output: {
       path: path.join(__dirname, `build/${env.browser}`),

@@ -25,6 +25,12 @@
       "matches": ["<all_urls>"],
       "js": ["content.[version].js"],
       "css": ["content.css"]
+    },
+    {
+      "js": ["script_inject_jira_link.[version].js"],
+      "matches": [
+        "https://protofy.mocoapp.com/*"
+      ]
     }
   ],
   "commands": {
