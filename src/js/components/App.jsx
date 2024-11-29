@@ -43,8 +43,8 @@ class App extends Component {
 
   get project() {
     const { service, projects, serviceLastProjectId, userLastProjectId } = this.state
-
     return (
+      findProjectByValue(service?.mocoProjectId)(projects) ||
       findProjectByValue(this.state.changeset.assignment_id)(projects) ||
       findProjectByValue(Number(serviceLastProjectId))(projects) ||
       findProjectByIdentifier(service?.projectId)(projects) ||
@@ -173,7 +173,6 @@ class App extends Component {
         return
       }
       this.loadMocoProjectId(data).then((mocoProjectId) => {
-        console.log(mocoProjectId)
         data.service.mocoProjectId = mocoProjectId
         this.setState({
           loading: false,

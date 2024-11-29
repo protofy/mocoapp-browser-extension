@@ -48,10 +48,7 @@ const Form = ({ changeset, errors, projects, onChange, onSubmit }) => {
     }
   }
 
-  const project = Select.findOptionByValue(
-    projects,
-    changeset.mocoProjectId ?? changeset.assignment_id,
-  )
+  const project = Select.findOptionByValue(projects, changeset.assignment_id)
 
   return (
     <form onSubmit={onSubmit}>
